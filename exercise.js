@@ -65,3 +65,33 @@ const fetchUserData = async () => {
 };
 
 fetchUserData(); // Output: User data berhasil diambil
+
+// class
+class Electronic {
+    constructor(type) {
+        this.type = type;
+    }
+
+    powerOn() {
+        return `${this.type} dinyalakan.`;
+    }
+}
+
+const smartphone = new Electronic("Smartphone");
+console.log(smartphone.powerOn()); // Output: Smartphone dinyalakan.
+
+// inheritance
+class Laptop extends Electronic {
+    constructor(type, brand) {
+        super(type);
+        this.brand = brand;
+    }
+
+    boot() {
+        return `${this.type} ${this.brand} sedang booting.`;
+    }
+}
+
+const dell = new Laptop("Laptop", "Dell");
+console.log(dell.powerOn()); // Output: Laptop dinyalakan.
+console.log(dell.boot());    // Output: Laptop Dell sedang booting.
