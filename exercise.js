@@ -42,3 +42,26 @@ console.log(bio); // Output: {firstName: "Attar", lastname: "Rifai", age: 17}
 // export and import
 const { greeting } = require('./utils');
 greeting("Rifai"); // Output: Hello, Rifai!
+
+// promises
+const getUserData = () => {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            resolve("User data berhasil diambil");
+        }, 1000);
+    });
+};
+
+getUserData().then(response => console.log(response)); // Output: User data berhasil diambil
+
+// async/await
+const fetchUserData = async () => {
+    try {
+        const response = await getUserData();
+        console.log(response);
+    } catch (error) {
+        console.error(error);
+    }
+};
+
+fetchUserData(); // Output: User data berhasil diambil
