@@ -26,3 +26,15 @@ console.log(ten, twenty, thirty); // Output: 10 20 30
 const person = { firstName: "Attar", lastName: "Rifai" };
 const { firstName, lastName } = person;
 console.log(firstName, lastName); // Output: Rifai 17
+
+// spread operator array
+const arr1 = [1, 2, 3];
+const arr2 = [4, 5, 6];
+const combined = [...arr1, ...arr2];
+console.log(combined); // Output: [1, 2, 3, 4, 5, 6]
+
+// spread operator object
+const names = { firstName: "Attar", lastname: "Rifai" };
+const ages = { age: 17 };
+const bio = { ...names, ...ages };
+console.log(bio); // Output: {firstName: "Attar", lastname: "Rifai", age: 17}
