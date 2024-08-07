@@ -38,3 +38,7 @@ const names = { firstName: "Attar", lastname: "Rifai" };
 const ages = { age: 17 };
 const bio = { ...names, ...ages };
 console.log(bio); // Output: {firstName: "Attar", lastname: "Rifai", age: 17}
+
+// export and import
+const { greeting } = require('./utils');
+greeting("Rifai"); // Output: Hello, Rifai!
